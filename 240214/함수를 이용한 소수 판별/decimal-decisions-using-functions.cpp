@@ -16,7 +16,18 @@ int main() {
     int a, b;
     cin >> a >> b;
 
-    vector<int> vec;
+    if(a==b){
+        if(isprime(a)){
+            cout<<a;
+        }
+        else{
+            cout<<0;
+        }
+
+    }
+
+    else{
+        vector<int> vec;
 
     for (int i = a;i <= b;i++) {
         if (isprime(i)) {
@@ -36,4 +47,5 @@ int main() {
     cout << sum;
 
 
+    }
 }
