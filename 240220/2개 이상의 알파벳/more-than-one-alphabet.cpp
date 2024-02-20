@@ -8,7 +8,7 @@ bool judege(string str){
 
     for(int i=0;i<n;i++){
         for(int j=i;i<n;j++){
-            if(str[i]==str[j]){
+            if(str[i]!=str[j]){
                 return true;
             }
         }
