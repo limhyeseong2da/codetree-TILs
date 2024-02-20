@@ -6,8 +6,8 @@ using namespace std;
 bool judege(string str){
     int n=str.size();
 
-    for(int i=0;i<n;i++){
-        for(int j=i;i<n;j++){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;i<n;j++){
             if(str[i]!=str[j]){
                 return true;
             }
