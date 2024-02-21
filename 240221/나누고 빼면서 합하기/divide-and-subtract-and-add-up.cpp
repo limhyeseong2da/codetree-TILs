@@ -2,37 +2,40 @@
 
 using namespace std;
 
-int fun(int* arr, int n, int m) {
-    int sum = 0;
-    if (m % 2 == 0) {
-        sum += arr[m - 1];
-        for (int i = m/2-1;i > -1;i--) {
-            sum += arr[i];
-            
+int arr[101];
+int cnt;
+
+int getAnswer(){
+    int return_value=0;
+    while(cnt){
+
+        return_value+=arr[cnt];
+
+        if(cnt%2==0){
+            cnt/=2;
         }
 
-        return sum;
-    }
-
-    else {
-        for (int i = m;i > 0;i--) {
-            sum += arr[i - 1];
+        else{
+            cnt--;
         }
 
-        return sum;
+        
+        
     }
+
+return return_value;
 }
 
-int main() {
-    int m, n;
-    cin >> n >> m;
-    int* arr = new int[m];
-    for (int i = 0;i < m;i++) {
-        cin >> arr[i];
+
+int main(){
+    int n,m;
+    cin>>n>>m;
+
+    for(int i=1;i<n+1;i++){
+        cin>>arr[i];
     }
 
-    cout << fun(arr, n, m);
-    
+    cnt=m;
 
-    delete[] arr;
+    cout<<getAnswer();
 }
