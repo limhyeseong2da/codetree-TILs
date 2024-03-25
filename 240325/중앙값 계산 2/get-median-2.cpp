@@ -17,7 +17,7 @@ int main() {
 		vec1.push_back(m);
 
 		if (i % 2 != 0) {
-			sort(vec1.begin()+1, vec1.end());
+			sort(vec1.begin(), vec1.end());
 			
 				cout << vec1[vec1.size() / 2]<<" ";
 			
