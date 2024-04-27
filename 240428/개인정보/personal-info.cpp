@@ -17,16 +17,16 @@ class myclass{
         this->weight=weight;
     }
 
-    string getname(){return name;}
-    int gettall(){return tall;}
-    double getweight(){return weight;}
+    string getname()const{return name;}
+    int gettall()const{return tall;}
+    double getweight()const{return weight;}
 };
 
-bool compare1 (myclass &a, myclass &b){
+bool compare1 (const myclass &a,const myclass &b){
     return a.gettall()>b.gettall();
 }
 
-bool compare2(myclass &a, myclass &b){
+bool compare2(const myclass &a, const myclass &b){
     return a.getname()<b.getname();
 }
 
