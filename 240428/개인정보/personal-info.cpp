@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -44,14 +45,16 @@ int main() {
     sort(vec.begin(),vec.end(),compare2);
      cout<<"name"<<"\n";
     for(myclass & mc: vec){
-        cout<<mc.getname()<<" "<<mc.gettall()<<" "<<mc.getweight()<<"\n";
+        cout<<mc.getname()<<" "<<mc.gettall()<<" ";
+        cout<<fixed<<setprecision(1)<<mc.getweight()<<"\n";
     }
 
     sort(vec.begin(),vec.end(),compare1);
     cout<<"\n"<<"height"<<"\n";
 
     for(myclass &mc :vec){
-        cout<<mc.getname()<<" "<<mc.gettall()<<" "<<mc.getweight()<<"\n"; 
+        cout<<mc.getname()<<" "<<mc.gettall()<<" ";
+        cout<<fixed<<setprecision(1)<<mc.getweight()<<"\n"; 
     }
        return 0;
 }
