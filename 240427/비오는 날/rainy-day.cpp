@@ -18,21 +18,21 @@ class myclass{
 };
 
 bool operator< (myclass &a,myclass &b){
-    return a.geta()>b.getb();
+    return a.geta()<b.geta();
 }
 
 int main() {
     
     int n;
     cin>>n;
-    vector <myclass> vec(n);
-    int check=0; 
+    vector <myclass> vec;
+
 
     for(int i=0;i<n;i++){
         string a,b,c;
         cin>>a>>b>>c;
         if(c=="Rain"){
-         vec[i]=myclass(a,b,c);
+         vec.push_back(myclass(a,b,c));
         }
     }
 
