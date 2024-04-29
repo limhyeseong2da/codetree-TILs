@@ -50,6 +50,9 @@ int main() {
             int dif4=(d1-d2)%7;
             cout<<date[7-dif4];
         }
+        else{
+            cout<<"Mon";
+        }
     }
     return 0;
 }
