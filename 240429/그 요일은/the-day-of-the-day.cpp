@@ -17,15 +17,13 @@ int countDays(int month, int day) {
 
 
 int countSpecificDay(int start, int end, int dayOfWeek) {
-    // 전체 기간 내 첫 번째 요일 시작 위치 계산
+    
     int firstDay = (dayOfWeek - (start % 7) + 7) % 7;
     if (firstDay == 0) firstDay = 7;
 
     
     int firstOccurrence = start + firstDay;
     if (firstOccurrence > end) return 0;
-
-    // 해당 요일의 발생 횟수 계산
     return (end - firstOccurrence) / 7 + 1;
 }
 
