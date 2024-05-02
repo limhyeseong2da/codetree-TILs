@@ -1,39 +1,70 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
     int n,m;
     cin>>n>>m;
-    int *arr=new int[n];
+    vector<int> vec;
+    int lead=0;
+    int time=0;
+    int dis=0;
+    int cnt=0;
+
     for(int i=0;i<n;i++){
         int v,t;
         cin>>v>>t;
-        arr[i]=v*t;
+        
+        for(int j=0;j<t;j++){
+            vec.push_back(dis+v*j);
+        }
+        dis+=v*t;
+        time+=t;
     }
-    int *arr1=new int[m];
-    for(int i=0;i<m;i++){
+    
+    vector<int> vec1;
+    int disb=0;
+
+     for(int i=0;i<n;i++){
         int v,t;
         cin>>v>>t;
-        arr1[i]=v*t;
+        
+        for(int j=0;j<t;j++){
+            vec1.push_back(disb+v*j);
+        }
+        disb+=v*t;
     }
 
-    int k=min(n,m);
+    for(int i=0;i<time;i++){
 
-    int *dif=new int[k];
-
-    for(int i=0;i<k;i++){
-        dif[i]=arr[i]-arr1[i];
-    }
-    int cnt=0;
-
-    for(int i=0;i<k-1;i++){
-        if(dif[i]*dif[i+1]<0){
+        if(lead==0){
+            if(vec[i]>vec1[i]){
+                lead=1;
+            }
+            else if(vec[i]<vec1[i]){
+                lead=-1;
+            }
+            else{
+                lead=0;
+            }
+        }
+        if((vec[i]<vec1[i])&&lead>0){
             cnt++;
+            lead=-1;
+        }
+        else if((vec[i]>vec1[i])&&lead<0){
+            cnt++;
+            lead=1;
         }
     }
 
+
     cout<<cnt;
+
+
+
+    
 
     return 0;
 }
