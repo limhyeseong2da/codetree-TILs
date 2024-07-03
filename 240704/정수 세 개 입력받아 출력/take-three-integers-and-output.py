@@ -1,0 +1,5 @@
+inp=input().split()
+a=int(inp[0])
+b=int(inp[1])
+c=int(input())
+print("%d %d %d"%(a,b,c))
