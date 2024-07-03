@@ -1,0 +1,5 @@
+inp=input()
+a=inp.split("-")
+b=int(a[0])
+c=int(a[1])
+print("%d%d"%(b,c))
