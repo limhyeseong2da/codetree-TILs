@@ -1,0 +1,6 @@
+inp=input()
+a=inp.split("-")
+year=int(a[2])
+month=int(a[1])
+day=int(a[0])
+print("%d.%d.%d"%(year,day,month))
