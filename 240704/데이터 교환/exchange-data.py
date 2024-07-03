@@ -1,0 +1,11 @@
+a=5
+b=6
+c=7
+temp=a
+a=c
+temp1=b
+b=temp
+c=temp1
+print(a)
+print(b)
+print(c)
