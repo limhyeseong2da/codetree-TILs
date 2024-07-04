@@ -1,5 +1,5 @@
 inp=int(input())
-w=inp**2
+w=inp*inp
 print(w)
 if w<5:
     print("tiny")
