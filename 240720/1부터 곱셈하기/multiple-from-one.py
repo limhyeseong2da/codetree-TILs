@@ -7,6 +7,6 @@ for i in range (1,11):
         break
     else:
         prod*=i
-        k=i-1
+        k=i
 
 print(k)
