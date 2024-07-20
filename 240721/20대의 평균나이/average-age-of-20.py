@@ -6,6 +6,8 @@ while True:
 
     if a//10>2:
         break
+    elif a//10==0:
+        break
     else:
         sum+=a
         cnt+=1
