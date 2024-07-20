@@ -1,5 +1,6 @@
 sum=0
 cnt=0
+
 while True:
     a=int(input())
 
@@ -9,4 +10,5 @@ while True:
         sum+=a
         cnt+=1
 
-print("%.2f"%(sum/cnt))
+if cnt>0:
+    print("%.2f"%(sum/cnt))
