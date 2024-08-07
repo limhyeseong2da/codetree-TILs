@@ -8,6 +8,6 @@ for i in range (a,b+1):
         chk=True
 
 if chk==False:
-    print("No")
+    print("NO")
 else:
     print("YES")
