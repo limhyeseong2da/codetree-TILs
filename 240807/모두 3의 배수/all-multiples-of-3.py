@@ -1,7 +1,7 @@
 chk=False
 for i in range(0,5):
     n=int(input())
-    if chk%3!=0:
+    if n%3!=0:
         chk=True
         break
 
